@@ -1,5 +1,8 @@
 # FC Barcelona Schedule
 
+**Live site:** <https://josephbenzaquen.github.io/fc-barcelona-schedule/>
+**Repository:** <https://github.com/JosephBenzaquen/fc-barcelona-schedule>
+
 A static website showing the FC Barcelona match schedule with kickoff times in
 both **Spain** and **New York**.
 
@@ -12,9 +15,13 @@ entirely in the browser.
 
 ## Running it
 
-Double-click `index.html`. It opens in the browser and works straight away.
+The published site is at
+<https://josephbenzaquen.github.io/fc-barcelona-schedule/> — nothing to install,
+it is served by GitHub Pages straight from the `main` branch.
 
-To serve it over HTTP instead (worth doing if you add to it later):
+To run it locally instead, double-click `index.html`: it opens in the browser
+and works straight away. Or serve it over HTTP (worth doing if you add to it
+later):
 
 ```bash
 python3 -m http.server 8000
