@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FC Barcelona Schedule</title>
+  <meta name="description" content="FC Barcelona match schedule with kickoff times in Spain and New York.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Blaugrana stripe, like the club shirt -->
+  <div class="stripe" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <h1 class="masthead__title">Barça<br>Schedule</h1>
+    <p class="masthead__intro">
+      Every match of the season with kickoff times in Spain and in New York. Your
+      browser works out the conversion, daylight saving changes included.
+    </p>
+  </header>
+
+  <main>
+
+    <!-- The next match. Filled in by app.js -->
+    <section class="feature" id="feature" aria-labelledby="feature-heading">
+      <h2 class="sr-only" id="feature-heading">Next match</h2>
+    </section>
+
+    <!-- Competition filters -->
+    <nav class="filters" aria-label="Filter by competition">
+      <button class="filter filter--on" type="button" data-competition="all" aria-pressed="true">All</button>
+      <button class="filter" type="button" data-competition="LaLiga" aria-pressed="false">LaLiga</button>
+      <button class="filter" type="button" data-competition="Champions League" aria-pressed="false">Champions League</button>
+      <button class="filter" type="button" data-competition="Copa del Rey" aria-pressed="false">Copa del Rey</button>
+    </nav>
+
+    <section class="block" aria-labelledby="heading-upcoming">
+      <h2 class="block__heading" id="heading-upcoming">
+        Upcoming matches
+        <span class="count" id="count-upcoming"></span>
+      </h2>
+
+      <div class="table-wrap">
+        <table class="fixtures">
+          <caption class="sr-only">Upcoming FC Barcelona matches with kickoff times in Spain and New York</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="col-date">Date</th>
+              <th scope="col" class="col-opponent">Opponent</th>
+              <th scope="col" class="col-competition">Competition</th>
+              <th scope="col" class="col-venue">Venue</th>
+              <th scope="col" class="col-time">Spain</th>
+              <th scope="col" class="col-time">New York</th>
+            </tr>
+          </thead>
+          <tbody id="rows-upcoming"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="heading-played">
+      <h2 class="block__heading" id="heading-played">
+        Matches played
+        <span class="count" id="count-played"></span>
+      </h2>
+
+      <div class="table-wrap">
+        <table class="fixtures">
+          <caption class="sr-only">FC Barcelona matches already played, most recent first</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="col-date">Date</th>
+              <th scope="col" class="col-opponent">Opponent</th>
+              <th scope="col" class="col-competition">Competition</th>
+              <th scope="col" class="col-venue">Venue</th>
+              <th scope="col" class="col-time">Spain</th>
+              <th scope="col" class="col-time">New York</th>
+            </tr>
+          </thead>
+          <tbody id="rows-played"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <p>
+      Class project for <em>AI Assisted Development of Products and Services</em>.
+      The fixtures are sample data and are not the club's official schedule.
+    </p>
+    <p id="foot-reference" class="foot__reference"></p>
+  </footer>
+
+  <!-- Data first, then the logic that uses it -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
